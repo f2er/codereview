@@ -9,4 +9,4 @@ a lightweight codereivew platform writen by php.
 for the install guide, please see the 'readme.txt' file.
 
 ###More Infomation###
-for system's screen shots and more information, please visit [http://www.imququ.com/post/about_codereview.html](http://www.imququ.com/post/about_codereview.html)
+for screen shots and more information, please visit [http://www.imququ.com/post/about_codereview.html](http://www.imququ.com/post/about_codereview.html)
