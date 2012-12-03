@@ -1,0 +1,1 @@
+<div class="my-mantle-con-notice"><span class="icon">&nbsp;</span>{%$content%}</div>

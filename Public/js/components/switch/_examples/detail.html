@@ -1,0 +1,132 @@
+<!DOCTYPE html><html><head>
+<meta charset="UTF-8">
+<title>详细页!!!有木有!!!</title>
+<script type="text/javascript" src="../../../apps/core_dom_merge.combo.js"></script>
+
+<!-- pic silder start -->
+<style type="text/css">
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td {margin: 0;padding: 0;}
+img,fieldset{border: 0}
+li{list-style-type: none;}
+a{text-decoration: none;color:#186bde}
+body{background-color: #fff;color: #666;font:normal normal normal 12px/1.5 Helvetica,Arial,Verdana, sans-serif;word-wrap:break-word;word-break:break-all;}
+
+#picBox{
+	width: 386px;
+
+	margin: 60px;
+}
+#picBox .main{
+	border: 5px solid #ccc;
+}
+#picBox img{vertical-align: top}
+
+#picBox .list{
+	padding: 10px;
+	text-align: center;
+}
+#picBox .list a{
+	padding: 1px;
+	border: 1px solid #dbdbdb;
+	display: inline-block;
+	margin: 0 5px;
+}
+#picBox .list li.selected a {
+		border: 2px solid #64a4f9;
+		padding: 0;
+	}
+
+#picBox .list .arr{
+	vertical-align: top;
+	display: inline-block;
+	height: 18px;
+	cursor: pointer;
+	margin: 15px 4px;
+	
+}
+#picBox .list .arr span{
+	position: absolute;
+	width: 9px;
+	height: 18px;
+	background: url(images/pic_list_arr_left.png) no-repeat 0 0;
+}
+#picBox .list .arrgt span{
+	background: url(images/pic_list_arr_right.png) no-repeat 0 0;
+}
+
+
+
+
+#picBox .switch-content { height:380px;width:380px; overflow:hidden;  }
+#picBox .switch-content ul { height:380px;width:9999px; }
+#picBox .switch-content li { height:380px;width:380px;float:left; }
+#picBox .switch-content li .mix{width: 380px;height: 380px;}
+
+
+#picBox .switch-scroll-panel { height:60px;width:300px;overflow:hidden; display:inline-block;}
+#picBox .switch-nav { height:60px; margin: auto }
+#picBox .switch-nav li {height:60px;width:60px;float:left; }
+#picBox .arr {visibility:hidden;}
+#picBox .switch-scroll {visibility:visible;}
+	
+</style>
+</head>
+<body>
+
+<div class="picbox" id="picBox">
+	<div class="main switch-content">
+		<ul>
+			<li><img src="images/b1.jpg"></li>
+			<li><img class="mix" src="images/s2.jpg" data--src="images/b2.jpg"></li>
+			<li><img class="mix" src="images/s3.jpg" data--src="images/b3.jpg"></li>
+			<li><img class="mix" src="images/s4.jpg" data--src="images/b4.jpg"></li>
+			<li><img class="mix" src="images/s3.jpg" data--src="images/b3.jpg"></li>
+			<li><img class="mix" src="images/s2.jpg" data--src="images/b2.jpg"></li>
+			<li><img class="mix" src="images/s1.jpg" data--src="images/b1.jpg"></li>
+		</ul>
+	</div>
+
+	<div class="list">
+		<span class="arr arrlt switch-scroll-prev"><span></span>&lt;</span>
+		<div class="switch-scroll-panel">
+			<ul class="switch-nav">
+				<li class="selected"><a href="#!"><img src="images/s1.jpg" width="44"></a></li>
+				<li><a href="#!"><img src="images/s2.jpg" width="44"></a></li>
+				<li><a href="#!"><img src="images/s3.jpg" width="44"></a></li>
+				<li><a href="#!"><img src="images/s4.jpg" width="44"></a></li>
+				<li><a href="#!"><img src="images/s3.jpg" width="44"></a></li>
+				<li><a href="#!"><img src="images/s2.jpg" width="44"></a></li>
+				<li><a href="#!"><img src="images/s1.jpg" width="44"></a></li>
+			</ul>
+		</div>
+		<span class="arr arrgt switch-scroll-next"><span></span>&gt;</span>
+	</div>
+</div>
+<script type="text/javascript">
+QW.use('Switch', function() {
+	var slide =new Switch.Slide(g("picBox"),{
+			events : ['mouseover'],
+			cancelDelayEvents : ['mouseout'],
+			delayTime : 250,
+			effect : 'scroll',
+			easing : function(p, d){ return -d/2 * (Math.cos(Math.PI*p) - 1); },
+			direction : 'left',
+			selector : { nav : '>*', content : ' ul > *' },
+			autoPlay : false
+		});
+	
+	slide.on('beforeswitch', function(e) {
+		var img = W(e.to.content).query('img');
+		if(img.attr('data--src')) {
+			img.attr('src', img.attr('data--src'));
+			img.removeAttr('data--src');
+			img.removeAttr('class');
+		}
+	});
+
+	var tabview = new Switch.Scroll(slide);
+	tabview.render();
+});
+</script>
+
+</body></html>

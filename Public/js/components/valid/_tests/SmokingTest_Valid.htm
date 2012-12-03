@@ -1,0 +1,53 @@
+<html>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<title>Valid</title>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<link href="../../../apps/assets/base.css" rel="stylesheet" type="text/css" media="screen"/>
+<link href="../assets/Tree.css" rel="stylesheet" type="text/css" media="screen">
+<script type="text/javascript" src="../../../apps/core_dom_pure.js"></script>
+<script type="text/javascript" src="../valid.js"></script>
+<script type="text/javascript" src="../../../_tools/smokingtest/SmokingTest.js"></script>
+<link href="../../../_tools/smokingtest/assets/page.css" rel="stylesheet" type="text/css" media="screen"/>
+</head>
+
+<body>
+<div id=doc3>
+	<h1 class="page-h1">BB Core.js 冒烟测试</h1>
+	<div id=hd>
+		<!-- keep it -->
+	</div>
+	<div id="bd" >
+		<div class="section-ctn" id="ST_ctn">
+		</div>
+	</div>
+	<div>
+		<hr/>
+<pre>
+	checkAll (oForm,needFocus,opts)	验证一个表单的所有元素
+	initAll (container)	初始化验证，包括：监控元素的onfocus/onblur，以及日期后面添加日历按钮
+	resetAll (oForm) 所有的错误验证信息清空。
+
+	check (el,needFocus,opts)	验证一个表单元素
+	hint (el)	点亮元素
+	blur (el)	离开元素
+	renderResult (el,result,errMsg,needFocus)	将验证结果渲染到页面
+	pass (el)	元素通过验证
+	fail (el,errMsg,needFocus)	元素未通过验证
+	focusFailEl (el)	焦点集中到未通过验证的Element上
+	initEl (el)	初始化验证，为日期后面添加日历按钮
+
+</pre>
+	</div>
+	<div id="ft">
+		BB 
+	</div>
+</div>
+
+<script>
+SmokingTest.init(document.getElementById('ST_ctn'),['BB']);
+</script>
+
+
+</html>

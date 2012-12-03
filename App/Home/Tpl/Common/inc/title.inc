@@ -1,0 +1,1 @@
+<h1 class="section-title cls"><span class="title">{%$content%}</span>{%$more|default:''%}</h1>

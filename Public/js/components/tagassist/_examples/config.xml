@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+	<info>
+		<name>TagAssist</name>
+		<author>JK</author>
+		<version>0.1</version>
+		<create-date></create-date>
+		<last-modified></last-modified>
+	</info>
+	<examples>
+		<example>
+			<title>Select帮助</title>
+			<discription>级联下拉框</discription>
+			<url>SelectAssist.htm</url>
+			<image>1.jpg</image>
+		</example>
+		<example>
+			<title>地址与邮编</title>
+			<discription>修改省市区后出现邮编建议</discription>
+			<url>SelectAssist-Zipcode.htm</url>
+			<image>2.jpg</image>
+		</example>
+	</examples>
+</config>

@@ -1,0 +1,11 @@
+/*
+通过以下update-tag，来解决common与core不是同时提测的问题
+update-tag: core/* tag001
+update-tag: common/* tag001
+*/
+@import url("../mis/bc.css");
+@import url("../common/panel.css");
+@import url("../common/form.css");
+@import url("../mis/module-home.css");
+@import url("../mis/module-manage.css");
+@import url("../mis/module-category.css");

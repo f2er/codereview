@@ -1,0 +1,129 @@
+.category-cascading-container {
+    background-color: #E5F0FF;
+    border: 1px solid #C7DEFF;
+    height: 280px;
+    overflow: auto;
+    position: relative;
+    width: 920px; /*775px*/
+	margin:.5em;
+}
+.category-cascading {
+    height: 261px;
+    margin: -1px 0 0 -4px;
+    overflow: hidden;
+    position: absolute;
+    width: 2210px;
+}
+
+.category-cascading ul input {
+	width:94%;
+}
+
+.category-cascading ul {
+    height: 254px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 3px;
+    width: 174px;
+}
+
+.category-cascading li.item {
+    background-color: #FFFFFF;
+    border: 1px solid #B2D1FF;
+    float: left;
+    height: 260px;
+    margin-left: 3px;
+    padding: 0;
+    position: relative;
+    width: 180px;
+	-moz-user-select: none;
+	-khtml-user-select: none;
+}
+
+.category-cascading li li {
+    height: 22px;
+    padding: 0;
+}
+
+.category-cascading li acronym {
+    display: none;
+}
+.root li.title, .root .quick-find {
+    display: none;
+}
+.category-cascading li.title {
+    visibility: hidden;
+}
+
+
+.category-cascading li span {
+    border: 1px solid #FFFFFF;
+    color: #404040;
+    cursor: pointer;
+    display: block;
+    height: 20px;
+    line-height: 20px;
+    overflow: hidden;
+    padding-left: 5px;
+	white-space:nowrap;
+}
+
+.category-cascading li.parent span {
+    background:url(images/arrow.gif) no-repeat 98% 7px;
+}
+
+.category-cascading li.selected span {
+    background-color: #D6EDF4;
+    border: 1px solid #98BBD2;
+    color: #1B4D91;
+}
+.category-cascading li.hascomment span {
+    color: red;
+}
+
+.category-cascading span.loading {
+	margin:5px;
+}
+
+.category-cascading em {
+	background:url(images/file.png) no-repeat 0 center;
+	display:block;
+	float:left;
+	height:20px;
+	width:20px;
+}
+.category-cascading em.folder {
+	background:url(images/folder.gif) no-repeat 0 center;
+	display:block;
+	float:left;
+	height:20px;
+	width:20px;
+}
+.category-cascading em.js {
+	background:url(images/file-js.png) no-repeat 0 center;
+	display:block;
+	float:left;
+	height:20px;
+	width:20px;
+}
+.category-cascading em.htm {
+	background:url(images/file-htm.png) no-repeat 0 center;
+	display:block;
+	float:left;
+	height:20px;
+	width:20px;
+}
+.category-cascading em.php {
+	background:url(images/file-php.png) no-repeat 0 center;
+	display:block;
+	float:left;
+	height:20px;
+	width:20px;
+}
+.category-cascading em.tpl {
+	background:url(images/file-tpl.png) no-repeat 0 center;
+	display:block;
+	float:left;
+	height:20px;
+	width:20px;
+}
